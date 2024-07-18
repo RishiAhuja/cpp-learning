@@ -27,4 +27,52 @@ int main()
     cout << "X: " << x << endl;
     cout << "Y: " << y << endl;
 
+    //explicit coversion
+
+    double x1{25.6};
+    double y1{22.5};
+
+    int sum;
+
+    sum = static_cast<int>(x1) + static_cast<int>(y1);
+    cout << sum << endl;
+
+    sum = static_cast<int>(x1+y1);
+    cout << sum << endl;
+
+
+    //Old style C-Cast
+    double PI{3.14};
+    int int_pi = (int)(PI);
+    cout << "PI: " << int_pi << endl;
+
+    //overflow and underflow
+    unsigned char data {250}; //can store till 255, after overflowing it will revert back from 0
+
+    ++data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    ++data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    ++data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    ++data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl;
+
+    ++data; 
+    std::cout << "data : " << static_cast<int>(data) << std::endl; // 255
+
+    ++data;  // Overflow
+    std::cout << "data : " << static_cast<int>(data) << std::endl; // 0
+
+
+    data = 1;
+
+    --data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl; //0
+
+    --data;
+    std::cout << "data : " << static_cast<int>(data) << std::endl; //255
 }
