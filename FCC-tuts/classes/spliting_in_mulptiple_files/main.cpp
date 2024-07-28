@@ -12,19 +12,46 @@ private:
 
 public:
     Dog() = default;
-    Dog(std::string_view name_param, std::string_view breed_param, int age_param);
+    Dog(std::string& name_param, std::string& breed_param, int age_param);
 
     // getter function:
-    std::string get_name()
-    {
-        return name;
-    };
+    // std::string get_name() const
+    // {
+    //     return name;
+    // };
+
+    // std::string get_breed() const
+    // {
+    //     return breed;
+    // };
+
+    // int get_age() const
+    // {
+    //     return *p_age;
+    // };
+
+    // //setters
+
+    // void set_name(string_view name){
+    //     this->name = name;
+    // }
+
+    // void set_name(string_view breed){
+    //     this->breed = breed;
+    // }
+
+    //getters as setters
+
+    // std::string& name()
+    // {
+    //     return name;
+    // }
 
     // a destructor
     ~Dog();
 };
 
-Dog::Dog(std::string_view name_param, std::string_view breed_param, int age_param)
+Dog::Dog(std::string& name_param, std::string& breed_param, int age_param)
 {
     name = name_param;
     breed = breed_param;
@@ -34,7 +61,7 @@ Dog::Dog(std::string_view name_param, std::string_view breed_param, int age_para
     // p_age = &age_param;
     *p_age = age_param;
     cout << "Dog constructor called: " << name << " :constructed at: " << this << endl;
-    //this provides the adress of the current constrcutor being used.
+    // this provides the adress of the current constrcutor being used.
 }
 
 Dog::~Dog()
@@ -55,20 +82,25 @@ Dog::~Dog()
 //     Dog *p_dog = new Dog("Fluffy", "pug", 3);
 //     delete p_dog;
 // }
+
+// void accepting(const Dog &dog)
+// {
+// }
+
 int main()
 {
     // cylinder cylinder1(10, 10);
 
     // cout << "Volume: " << cylinder1.volume() << endl;
 
-    // Dog my_dog("Fluffy", "Pug", 5);
-
+    // const Dog my_dog("Fluffy", "Pug", 5);
+    // accepting(my_dog);
     // test_func();
 
-    Dog dog1("Doggy1", "pug", 2);
-    Dog dog2("Doggy2", "pug", 2);
-    Dog dog3("Doggy3", "pug", 2);
-    Dog dog4("Doggy4", "pug", 2);
+    // Dog dog1("Doggy1", "pug", 2);
+    // Dog dog2("Doggy2", "pug", 2);
+    // Dog dog3("Doggy3", "pug", 2);
+    // Dog dog4("Doggy4", "pug", 2);
 
     cout << "main function is ending, hence desctructor might be called after the end of scope" << endl;
 }
