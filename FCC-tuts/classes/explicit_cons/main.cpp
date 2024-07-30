@@ -9,10 +9,10 @@ bool compare (const Square& s1, const Square& s2)
 
 int main()
 {
-    Square sq1(10);
-    Square sq2(12);
+    // Square sq1(10);
+    // Square sq2(12);
 
-    cout << compare(sq1, sq2) << endl;
+    // cout << compare(sq1, sq2) << endl;
 
     //implicit conversion
 
@@ -24,5 +24,10 @@ int main()
 
     //To avoid this, we can make the constructor explicit
 
-    cout << compare(sq1, sq2) << endl;
+    // cout << compare(sq1, sq2) << endl;
+
+
+    Square s1(10);
+
+    s1.print_info();
 }
