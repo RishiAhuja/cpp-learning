@@ -9,25 +9,9 @@ bool compare (const Square& s1, const Square& s2)
 
 int main()
 {
-    // Square sq1(10);
-    // Square sq2(12);
-
-    // cout << compare(sq1, sq2) << endl;
-
-    //implicit conversion
-
-
-    //as the object is just taking a single double parameter,
-    //the compiler will try to impicitly convert the double to a temporary square object for comparison
-    // cout << compare(sq1, 45.6) << endl;
-    // cout << compare(sq1, 5.6) << endl;
-
-    //To avoid this, we can make the constructor explicit
-
-    // cout << compare(sq1, sq2) << endl;
-
-
-    Square s1(10);
+    Square s1(10); //will call one param constructor
 
     s1.print_info();
+
+    //control will call the three param constructor, then the one param constructor
 }
