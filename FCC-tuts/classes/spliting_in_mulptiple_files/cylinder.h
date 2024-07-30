@@ -15,7 +15,7 @@ class cylinder
         /*.......*/
 
         cylinder() = default;
-        cylinder(double radius_param, double height_param);
+        cylinder(double radius_param = 5, double height_param = 10);
 
         //Getters
         double get_radius();
