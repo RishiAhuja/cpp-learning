@@ -23,14 +23,22 @@ int main (){
     
     //Data with spaces
 
-    std::string full_name;
+    // std::string full_name;
     
-    std::cout << "Enter your name: ";
+    // std::cout << "Enter your name: ";
+    // std::getline(std::cin, full_name);
+
+    // std::cout << "Enter your age: ";
+    // std::cin >> age;
+
+    // std::cout << "Your name: " << full_name << " Your age: " << age << std::endl;
+
+
+    // int age;
+    // std::cin >> age;
+
+
+    std::string full_name;
     std::getline(std::cin, full_name);
-
-    std::cout << "Enter your age: ";
-    std::cin >> age;
-
-    std::cout << "Your name: " << full_name << " Your age: " << age << std::endl;
 
 }

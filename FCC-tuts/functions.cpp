@@ -17,6 +17,11 @@ int max(int a, int b){
 }
 
 
+double accepting_array(double (&scores)[10])
+{
+
+}
+
 //seperating function headers
 
 int max2_func (int a, int b);
