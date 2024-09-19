@@ -4,7 +4,7 @@ using namespace std;
 
 size_t Point::m_point_count{0};
 
-Point::Point(double p_x, double p_y) : m_x(p_x), m_y(p_y) {
+Point::Point(double p_x, double p_y) : m_x(p_x), m_y(p_y), m_origin_point(nullptr) {
     m_point_count++;
 }
 
