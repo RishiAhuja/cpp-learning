@@ -2,7 +2,7 @@
 #define POINT_H
 #include <iostream>
 #include <cassert>
-
+#include <compare>
 class Point
 {
     friend Point operator+(const Point& left, const Point& right);
@@ -57,8 +57,22 @@ public:
 		return local_point;
 	}
 
-
-	Point operator=(Point &right_operand){
+	//custom spaceship operator overload
+	std::partial_ordering operator<=>(const Point& right) const{
+		auto lhs_length = this->length();
+    	auto rhs_length = right.length();
+    
+    	if (lhs_length < rhs_length) {
+        	return std::partial_ordering::less;
+    	} else if (lhs_length > rhs_length) {
+        	return std::partial_ordering::greater;
+    	} else if {
+        	return std::partial_ordering::equivalent;
+    	} else{
+			return std::partial_ordering::unordered;
+		}
+	}
+	Point& operator=(Point &right_operand){
 		if(this!= &right_operand){
 			delete rand_ptr;
 			this->m_x = right_operand.m_x;
