@@ -44,8 +44,8 @@ int main() {
     //using shared pointer to manage already existing memory
 
     int *p = new int{300};
-
     std::shared_ptr<int> ptr_managing_raw{p};
+    p = nullptr;
 
     //we can reset the shared pointer which will reduce the reference count
 
